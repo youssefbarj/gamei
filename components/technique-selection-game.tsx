@@ -80,6 +80,7 @@ export default function TechniqueSelectionGame() {
   const [draggedItem, setDraggedItem] = useState<string | null>(null)
   const [feedback, setFeedback] = useState<DropResult | null>(null)
   const [showGuide, setShowGuide] = useState(false)
+  const [showVideo, setShowVideo] = useState(false)
 
   const handleDragStart = (scenarioId: string) => {
     setDraggedItem(scenarioId)
@@ -134,7 +135,7 @@ export default function TechniqueSelectionGame() {
           <h1 className="text-2xl sm:text-3xl font-bold text-purple-900 mb-2">
             Choisir la Bonne Technique - Mini Game
           </h1>
-          <p className="text-purple-700 mb-4">Glissez-déposez la technique appropriée selon le type de client</p>
+          <p className="text-purple-700 mb-4">Glissez le bon scénario client vers la bonne technique</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <Badge className="text-lg px-4 py-2 bg-purple-200 text-purple-800 hover:bg-purple-200">
@@ -217,13 +218,25 @@ export default function TechniqueSelectionGame() {
                 </DialogContent>
               </Dialog>
 
-              <Button
-                onClick={resetGame}
-                variant="outline"
-                className="border-pink-300 text-pink-600 hover:bg-pink-50 bg-transparent"
-              >
-                Recommencer
-              </Button>
+              <Dialog open={showVideo} onOpenChange={setShowVideo}>
+                <DialogTrigger asChild>
+                  <Button className="bg-pink-600 hover:bg-pink-700 text-white">COMMENT JOUER</Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl p-6">
+                  <DialogHeader>
+                    <DialogTitle className="text-purple-900 text-xl text-center mb-4">Comment Jouer</DialogTitle>
+                  </DialogHeader>
+                  <div className="flex justify-center">
+                    <Image
+                      src="/gifs/tutorial.gif"
+                      alt="Tutoriel comment jouer"
+                      width={800}
+                      height={450}
+                      className="rounded-lg"
+                    />
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>
