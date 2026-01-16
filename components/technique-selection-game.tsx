@@ -135,7 +135,7 @@ export default function TechniqueSelectionGame() {
           <h1 className="text-2xl sm:text-3xl font-bold text-purple-900 mb-2">
             Choisir la Bonne Technique - Mini Game
           </h1>
-          <p className="text-purple-700 mb-4">Glissez le bon scénario client vers la bonne technique</p>
+          <p className="text-purple-700 mb-4">Déplacez le type de peau choisi vers la technique la plus adaptée</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <Badge className="text-lg px-4 py-2 bg-purple-200 text-purple-800 hover:bg-purple-200">
