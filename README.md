@@ -7,7 +7,7 @@
 
 ## Screenshot
 
-![gamei](https://github.com/youssefbarj/gamei/raw/main/screenshot.png)
+![gamei](https://raw.githubusercontent.com/youssefbarj/gamei/main/screenshot.png)
 
 ## What this slide does
 
